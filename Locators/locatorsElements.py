@@ -9,4 +9,8 @@ class locatorsElements():
   permanentAddress_textbox_id   = 'permanentAddress'
   submit_button_id              = 'submit'
   
+
+class locatorsElementsCheckBox():
   
+  checkbox_button_xpath            = '//*[@id="item-1"]/span'
+

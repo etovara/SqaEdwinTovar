@@ -1,9 +1,9 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.action_chains import ActionChains
-from Locators.locatorsElements import locatorsElements
+from Locators.locatorsElements import *
 
-class page():
+class pageElementsTextBox():
   
   def __init__(self, driver):
     self.driver = driver
@@ -40,3 +40,14 @@ class page():
       self.driver.find_element(By.ID, self.submit_button_id).clear()
       self.driver.find_element(By.ID, self.submit_button_id).send_keys(submit)
       ActionChains(self).scroll_to_element(self.enter_submit)
+
+class pageElementsCheckBox():
+      
+  def __init__(self, driver):
+    self.driver = driver
+    
+    self.checkbox_button_xpath          = locatorsElementsCheckBox.checkbox_button_xpath
+
+      
+  def checkbox_button(self):
+    self.driver.find_element(By.XPATH, self.checkbox_button_xpath).click()

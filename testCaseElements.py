@@ -3,7 +3,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
-from Pages.pageElements import page
+from Pages.pageElements import *
 import unittest
 import HtmlTestRunner
 import time
@@ -16,25 +16,26 @@ class demoqaElements(unittest.TestCase):
     cls.driver.maximize_window()
   
   
-  def test_elements(self):
+  def test_elements_TextBox(self):
     driver = self.driver
     driver.get("https://demoqa.com/elements")
-    time.sleep(2)
     
-    testCase = page(driver)
-    testCase.click_textbox()
+    
+    testCaseElementsTextBox = pageElementsTextBox(driver)
+    testCaseElementsTextBox.click_textbox()    
+    testCaseElementsTextBox.enter_username("Edwin Tovar")   
+    testCaseElementsTextBox.enter_email("edwintovaraladejo@gmail.com")    
+    testCaseElementsTextBox.enter_currentAddress("Ciudad Autonoma de Buenos Aires")    
+    testCaseElementsTextBox.enter_permanentAddress("Ciudad Autonoma de Buenos Aires, Argentina")    
+    testCaseElementsTextBox.enter_submit
     time.sleep(2)
-    testCase.enter_username("Edwin Tovar")
-    time.sleep(2)
-    testCase.enter_email("edwintovaraladejo@gmail.com")
-    time.sleep(2)
-    testCase.enter_currentAddress("Ciudad Autonoma de Buenos Aires")
-    time.sleep(2)
-    testCase.enter_permanentAddress("Ciudad Autonoma de Buenos Aires, Argentina")
-    time.sleep(2)
-    testCase.enter_submit
-    time.sleep(2)
-
+  
+  def test_elements_CheckBox(self):
+    driver = self.driver
+    driver.get("https://demoqa.com/elements")
+    
+    testCaseElementsCheckBox = pageElementsCheckBox(driver)
+    testCaseElementsCheckBox.checkbox_button()
 
 
   @classmethod  
