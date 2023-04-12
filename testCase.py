@@ -15,16 +15,25 @@ class demoqaElements(unittest.TestCase):
     cls.driver = webdriver.Chrome(executable_path= r"C:\Program Files\Python310\Chome_Driver\chromedriver.exe")
     cls.driver.maximize_window()
   
+  
   def test_elements(self):
     driver = self.driver
     driver.get("https://demoqa.com/elements")
-    time.sleep(3)
+    time.sleep(2)
     
     testCase = page(driver)
     testCase.click_textbox()
-    time.sleep(3)
+    time.sleep(2)
     testCase.enter_username("Edwin Tovar")
-    time.sleep(3)
+    time.sleep(2)
+    testCase.enter_email("edwintovaraladejo@gmail.com")
+    time.sleep(2)
+    testCase.enter_currentAddress("Ciudad Autonoma de Buenos Aires")
+    time.sleep(2)
+    testCase.enter_permanentAddress("Ciudad Autonoma de Buenos Aires, Argentina")
+    time.sleep(2)
+    testCase.enter_submit
+    time.sleep(2)
 
 
 
@@ -32,7 +41,7 @@ class demoqaElements(unittest.TestCase):
   def tearDownClass(cls):
     cls.driver.close()
     cls.driver.quit()
-    time.sleep(3)
+    time.sleep(2)
     print("Test Completado")
 
 if __name__ == '__main__':
