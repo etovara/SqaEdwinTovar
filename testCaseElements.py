@@ -17,7 +17,7 @@ class demoqaElements(unittest.TestCase):
     cls.driver.maximize_window()
   
   
-  """def test_elements_TextBox(self):
+  def test_elements_TextBox(self):
     driver = self.driver
     driver.get("https://demoqa.com/elements")
     
@@ -48,7 +48,7 @@ class demoqaElements(unittest.TestCase):
     testCaseElementsCheckBox.home_button()
     time.sleep(2)
     testCaseElementsCheckBox.collapse_button()
-    time.sleep(2)"""
+    time.sleep(2)
 
 
   def test_elements_RadioButton(self):

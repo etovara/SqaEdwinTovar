@@ -11,9 +11,9 @@
         <div class="row">
             <div class="col-xs-12">
                 <h2 class="text-capitalize">Unittest Results</h2>
-                <p class='attribute'><strong>Start Time: </strong>2023-04-14 14:51:47</p>
-                <p class='attribute'><strong>Duration: </strong>5.35 s</p>
-                <p class='attribute'><strong>Summary: </strong>Total: 1, Pass: 0, Error: 1</p>
+                <p class='attribute'><strong>Start Time: </strong>2023-04-14 16:48:43</p>
+                <p class='attribute'><strong>Duration: </strong>32.87 s</p>
+                <p class='attribute'><strong>Summary: </strong>Total: 3, Pass: 3</p>
             </div>
         </div>
         <div class="row">
@@ -27,32 +27,33 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class='warning'>
-                            <td class="col-xs-10">test_elements_RadioButton</td>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_elements_CheckBox</td>
                             <td class="col-xs-1">
-                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
                             </td>
                             <td class="col-xs-1">
-                                <button class="btn btn-default btn-xs">View</button>
                             </td>
                         </tr>
-                        <tr style="display:none;">
-                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">AttributeError: move_to requires a WebElement</p><p style="color:maroon;">Traceback (most recent call last):
-  File "c:\Users\Edwin Tovar\Desktop\DemoQA\testCaseElements.py", line 59, in test_elements_RadioButton
-    testCaseElementsRadioButton.radio_button()
-  File "c:\Users\Edwin Tovar\Desktop\DemoQA\Pages\pageElements.py", line 81, in radio_button
-    ActionChains(self.radio_button_xpath).move_to_element(self.radio_button_xpath)
-  File "C:\Users\Edwin Tovar\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\common\action_chains.py", line 232, in move_to_element
-    self.w3c_actions.pointer_action.move_to(to_element)
-  File "C:\Users\Edwin Tovar\AppData\Roaming\Python\Python310\site-packages\selenium\webdriver\common\actions\pointer_actions.py", line 87, in move_to
-    raise AttributeError("move_to requires a WebElement")
-AttributeError: move_to requires a WebElement
-</p>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_elements_RadioButton</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_elements_TextBox</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
                             </td>
                         </tr>
                         <tr>
                             <td colspan="3">
-                                Total: 1, Pass: 0, Error: 1 -- Duration: 5.35 s
+                                Total: 3, Pass: 3 -- Duration: 32.87 s
                             </td>
                         </tr>
                     </tbody>
