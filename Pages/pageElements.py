@@ -1,6 +1,8 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from Locators.locatorsElements import *
 
 class pageElementsTextBox():
@@ -47,7 +49,41 @@ class pageElementsCheckBox():
     self.driver = driver
     
     self.checkbox_button_xpath          = locatorsElementsCheckBox.checkbox_button_xpath
+    self.expand_button_css              = locatorsElementsCheckBox.expand_button_css
+    self.home_button_xpath              = locatorsElementsCheckBox.home_button_xpath
+    self.collapse_button_css            = locatorsElementsCheckBox.collapse_button_css
 
       
   def checkbox_button(self):
     self.driver.find_element(By.XPATH, self.checkbox_button_xpath).click()
+  
+  def expand_button(self):
+    self.driver.find_element(By.CSS_SELECTOR, self.expand_button_css).click()
+  
+  def home_button(self):
+    self.driver.find_element(By.XPATH, self.home_button_xpath).click()
+
+  def collapse_button(self):
+    self.driver.find_element(By.CSS_SELECTOR, self.collapse_button_css).click()
+
+
+class pageElementsRadioButton():
+      
+  def __init__(self, driver):
+    self.driver = driver
+    
+    self.radio_button_xpath          = locatorsElementsRadioButton.radio_button_xpath
+    self.yes_radio_xpath             = locatorsElementsRadioButton.yes_radio_xpath
+    self.impressive_radio_xpath      = locatorsElementsRadioButton.impressive_radio_xpath
+  
+  def radio_button(self):
+    self.driver.find_element(By.XPATH, self.radio_button_xpath)
+    ActionChains(self.driver).click()
+
+  def yes_radio(self):
+    self.driver.find_element(By.ID, self.yes_radio_xpath)
+    ActionChains(self.driver).click().click()
+
+  def impressive_radio(self):
+    self.driver.find_element(By.ID, self.impressive_radio_xpath)
+    ActionChains(self.driver).click().click()

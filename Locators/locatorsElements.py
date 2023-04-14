@@ -12,5 +12,14 @@ class locatorsElements():
 
 class locatorsElementsCheckBox():
   
-  checkbox_button_xpath            = '//*[@id="item-1"]/span'
+  checkbox_button_xpath             = '//*[@id="item-1"]/span'
+  expand_button_css                 = '#tree-node > div > button.rct-option.rct-option-expand-all > svg'
+  home_button_xpath                 = '//*[@id="tree-node"]/ol/li/span/label/span[3]'
+  collapse_button_css               = '#tree-node > div > button.rct-option.rct-option-collapse-all > svg'
 
+
+class locatorsElementsRadioButton():
+  
+  radio_button_xpath               = '//*[@id="item-2"]/span' 
+  yes_radio_xpath                  = '//*[@id="app"]/div/div/div[2]/div[2]/div[2]/div[2]/label' 
+  impressive_radio_xpath           = ''
