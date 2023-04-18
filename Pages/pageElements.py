@@ -73,7 +73,7 @@ class pageElementsRadioButton():
     self.driver = driver
     
     self.radio_button_xpath          = locatorsElementsRadioButton.radio_button_xpath
-    self.yes_radio_xpath             = locatorsElementsRadioButton.yes_radio_xpath
+    self.yes_radio_xpath                = locatorsElementsRadioButton.yes_radio_xpath
     self.impressive_radio_xpath      = locatorsElementsRadioButton.impressive_radio_xpath
   
   def radio_button(self):
@@ -81,9 +81,30 @@ class pageElementsRadioButton():
     ActionChains(self.driver).click()
 
   def yes_radio(self):
-    self.driver.find_element(By.ID, self.yes_radio_xpath)
-    ActionChains(self.driver).click().click()
+    self.driver.find_element(By.XPATH, self.yes_radio_xpath)
+    ActionChains(self.driver).click()
 
   def impressive_radio(self):
     self.driver.find_element(By.ID, self.impressive_radio_xpath)
     ActionChains(self.driver).click().click()
+
+
+class pageElementwebTables():
+  
+  def __init__(self, driver):
+    self.driver = driver
+    
+    self.webTables_button_xpath       = locatorsElementsWebTables.webTables_button_xpath
+    self.searchBox_input_id           = locatorsElementsWebTables.searchBox_input_id
+    self.delete_button_xpath          = locatorsElementsWebTables.delete_button_xpath
+    self.edit_button_xpath            = locatorsElementsWebTables.edit_button_xpath
+    
+  def webTables(self):
+    self.driver.find_element(By.CSS_SELECTOR, self.webTables_button_xpath)
+    ActionChains(self.webTables_button_xpath).click()
+  
+  def searchBox(self, searchbox):
+    self.driver.find_element(By.ID, self.searchBox_input_id).send_keys(searchbox)
+  
+  def delete(self):
+    self.driver.find_element(By.XPATH, self.delete_button_xpath).click()

@@ -20,6 +20,26 @@ class locatorsElementsCheckBox():
 
 class locatorsElementsRadioButton():
   
-  radio_button_xpath               = '//*[@id="item-2"]/span' 
-  yes_radio_xpath                  = '//*[@id="app"]/div/div/div[2]/div[2]/div[2]/div[2]/label' 
+  radio_button_xpath               = '//*[@id="item-2"]/span'
+  yes_radio_xpath                  = '//*[@id="yesRadio"]'
   impressive_radio_xpath           = ''
+
+
+class locatorsElementsWebTables():
+  
+  webTables_button_xpath                        = '#item-3 > span'
+  searchBox_input_id                            = 'searchBox'
+  delete_button_xpath                           = '//*[@id="delete-record-1"]'
+  edit_button_xpath                             = '//*[@id="edit-record-3"]'
+
+class locatprsElementsAddWebTables():
+  
+  add_button_id                                 = 'addNewRecordButton'
+  firstName_text_id                             = 'firstName'
+  lastName_text_id                              = 'lastName'
+  userEmail_text_id                             = 'userEmail'
+  age_text_id                                   = 'age'
+  salary_text_id                                = 'salary'
+  department_text_id                            = 'department'
+  submit_button_id                              = 'submit'
+  close_button_xpath                            = '/html/body/div[4]/div/div/div[1]/button/span[1]'

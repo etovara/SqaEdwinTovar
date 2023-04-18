@@ -3,6 +3,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.actions import *
 from selenium.webdriver.support import expected_conditions as EC
 from Pages.pageElements import *
 import unittest
@@ -17,7 +18,7 @@ class demoqaElements(unittest.TestCase):
     cls.driver.maximize_window()
   
   
-  def test_elements_TextBox(self):
+  """def test_elements_TextBox(self):
     driver = self.driver
     driver.get("https://demoqa.com/elements")
     
@@ -53,15 +54,29 @@ class demoqaElements(unittest.TestCase):
 
   def test_elements_RadioButton(self):
     driver = self.driver
-    driver.get("https://demoqa.com/elements")
+    driver.get("https://demoqa.com/radio-button")
     
     testCaseElementsRadioButton = pageElementsRadioButton(driver)
     testCaseElementsRadioButton.radio_button()
-    time.sleep(4)
-    #testCaseElementsRadioButton.yes_radio()
-    #time.sleep(2)
+    time.sleep(2)
+    testCaseElementsRadioButton.yes_radio()
+    time.sleep(2)
     #testCaseElementsRadioButton.impressive_radio()
-    #time.sleep(2)
+    #time.sleep(2)"""
+  
+  def test_elements_Web_Tables(self):
+    driver = self.driver
+    driver.get("https://demoqa.com/webtables")
+    
+    testCaseElementWebTables = pageElementwebTables(driver)
+    testCaseElementWebTables.webTables()
+    time.sleep(4)
+    testCaseElementWebTables.delete()
+    time.sleep(4)
+    testCaseElementWebTables.searchBox("Legal")
+    time.sleep(4)
+    
+  
 
 
   @classmethod  
