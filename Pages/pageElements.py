@@ -108,3 +108,45 @@ class pageElementwebTables():
   
   def delete(self):
     self.driver.find_element(By.XPATH, self.delete_button_xpath).click()
+
+class pageElement_add_webTables():
+  
+  def __init__(self, driver):
+    self.driver = driver
+    
+    self.add_button_id          = locatorsElementsAddWebTables.add_button_id
+    self.firstName_text_id      = locatorsElementsAddWebTables.firstName_text_id
+    self.lastName_text_id       = locatorsElementsAddWebTables.lastName_text_id
+    self.userEmail_text_id      = locatorsElementsAddWebTables.userEmail_text_id
+    self.age_text_id            = locatorsElementsAddWebTables.age_text_id
+    self.salary_text_id         = locatorsElementsAddWebTables.salary_text_id
+    self.department_text_id     = locatorsElementsAddWebTables.department_text_id
+    self.submit_button_id       = locatorsElementsAddWebTables.submit_button_id
+    self.close_button_xpath     = locatorsElementsAddWebTables.close_button_xpath
+  
+  def add_button(self):
+    self.driver.find_element(By.ID,self.add_button_id).click()
+  
+  def firstName_text(self, firstname):
+      self.driver.find_element(By.ID, self.firstName_text_id).send_keys(firstname)
+  
+  def lastName_text(self, lastname):
+    self.driver.find_element(By.ID, self.lastName_text_id).send_keys(lastname)
+  
+  def userEmail_text(self, email):
+    self.driver.find_element(By.ID, self.userEmail_text_id).send_keys(email)
+  
+  def age_text(self, age):
+    self.driver.find_element(By.ID, self.age_text_id).send_keys(age)
+  
+  def salary_text(self, salary):
+    self.driver.find_element(By.ID, self.salary_text_id).send_keys(salary)
+  
+  def department_text(self, department):
+    self.driver.find_element(By.ID, self.department_text_id).send_keys(department)
+  
+  def submit_button(self):
+    self.driver.find_element(By.ID, self.submit_button_id).click()
+  
+  def close_button(self):
+    self.driver.find_element(By.ID, self.close_button_xpath).click()

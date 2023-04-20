@@ -32,7 +32,7 @@ class locatorsElementsWebTables():
   delete_button_xpath                           = '//*[@id="delete-record-1"]'
   edit_button_xpath                             = '//*[@id="edit-record-3"]'
 
-class locatprsElementsAddWebTables():
+class locatorsElementsAddWebTables():
   
   add_button_id                                 = 'addNewRecordButton'
   firstName_text_id                             = 'firstName'

@@ -62,7 +62,7 @@ class demoqaElements(unittest.TestCase):
     testCaseElementsRadioButton.yes_radio()
     time.sleep(2)
     #testCaseElementsRadioButton.impressive_radio()
-    #time.sleep(2)"""
+    #time.sleep(2)
   
   def test_elements_Web_Tables(self):
     driver = self.driver
@@ -74,9 +74,27 @@ class demoqaElements(unittest.TestCase):
     testCaseElementWebTables.delete()
     time.sleep(4)
     testCaseElementWebTables.searchBox("Legal")
-    time.sleep(4)
-    
+    time.sleep(4)"""
   
+  def test_elements_Add_WebTables(self):
+    driver = self.driver
+    driver.get ("https://demoqa.com/webtables")
+    
+    testCaseElementAddWebTables = pageElement_add_webTables(driver)
+    testCaseElementAddWebTables.add_button()
+    testCaseElementAddWebTables.firstName_text("Juan")
+    time.sleep(1)
+    testCaseElementAddWebTables.lastName_text("Porra")
+    time.sleep(1)
+    testCaseElementAddWebTables.userEmail_text("Prueba@Prueba.com")
+    time.sleep(1)
+    testCaseElementAddWebTables.age_text("30")
+    time.sleep(1)
+    testCaseElementAddWebTables.salary_text("1500")
+    time.sleep(1)
+    testCaseElementAddWebTables.department_text("IT")
+    time.sleep(1)
+    testCaseElementAddWebTables.submit_button()
 
 
   @classmethod  
