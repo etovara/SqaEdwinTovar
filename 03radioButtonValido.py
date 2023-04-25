@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.actions import *
 from selenium.webdriver.support import expected_conditions as EC
-from Pages.pageElements import *
+from Pages.pageElements import pageElementsRadioButton
 import unittest
 import HtmlTestRunner
 import time
@@ -22,12 +22,10 @@ class demoqaElements(unittest.TestCase):
     driver.get("https://demoqa.com/radio-button")
     
     testCaseElementsRadioButton = pageElementsRadioButton(driver)
-    testCaseElementsRadioButton.radio_button()
+    testCaseElementsRadioButton.yesRadio()
     time.sleep(2)
-    testCaseElementsRadioButton.yes_radio()
+    testCaseElementsRadioButton.impressiveRadio()
     time.sleep(2)
-    #testCaseElementsRadioButton.impressive_radio()
-    #time.sleep(2)
 
   @classmethod  
   def tearDownClass(cls):

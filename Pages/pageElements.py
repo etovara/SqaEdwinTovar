@@ -72,22 +72,14 @@ class pageElementsRadioButton():
   def __init__(self, driver):
     self.driver = driver
     
-    self.radio_button_xpath          = locatorsElementsRadioButton.radio_button_xpath
     self.yes_radio_xpath                = locatorsElementsRadioButton.yes_radio_xpath
-    self.impressive_radio_xpath      = locatorsElementsRadioButton.impressive_radio_xpath
+    self.impressive_radio_xpath         = locatorsElementsRadioButton.impressive_radio_xpath
   
-  def radio_button(self):
-    self.driver.find_element(By.XPATH, self.radio_button_xpath)
-    ActionChains(self.driver).click()
+  def yesRadio(self):
+    self.driver.find_element(By.XPATH, self.yes_radio_xpath).click()
 
-  def yes_radio(self):
-    self.driver.find_element(By.XPATH, self.yes_radio_xpath)
-    ActionChains(self.driver).click()
-
-  def impressive_radio(self):
-    self.driver.find_element(By.ID, self.impressive_radio_xpath)
-    ActionChains(self.driver).click().click()
-
+  def impressiveRadio(self):
+    self.driver.find_element(By.XPATH, self.impressive_radio_xpath).click()
 
 class pageElementwebTables():
   

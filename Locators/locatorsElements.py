@@ -20,9 +20,8 @@ class locatorsElementsCheckBox():
 
 class locatorsElementsRadioButton():
   
-  radio_button_xpath               = '//*[@id="item-2"]/span'
-  yes_radio_xpath                  = '//*[@id="yesRadio"]'
-  impressive_radio_xpath           = ''
+  yes_radio_xpath                  = '//*[@id="app"]/div/div/div[2]/div[2]/div[2]/div[2]/label'
+  impressive_radio_xpath           = '//*[@id="app"]/div/div/div[2]/div[2]/div[2]/div[3]/label'
 
 
 class locatorsElementsWebTables():

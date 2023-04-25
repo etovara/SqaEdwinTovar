@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.actions import *
 from selenium.webdriver.support import expected_conditions as EC
-from Pages.pageElements import *
+from Pages.pageElements import pageElementsTextBox
 import unittest
 import HtmlTestRunner
 import time
