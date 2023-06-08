@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.actions import *
 from selenium.webdriver.support import expected_conditions as EC
-from Pages.pageElements import pagesElements
+from Pages.pageElements import *
 import unittest
 import HtmlTestRunner
 import time
@@ -20,22 +20,20 @@ class demoqaElements(unittest.TestCase):
   
   def testBase(self):
     driver = self.driver
-    driver.get("https://demoqa.com/elements")
+    driver.get("https://www.online-notepad.net/es/bloc-de-notas-online")
     
     testBase = pagesElements(driver)
     testBase.click_textbox()
-    time.sleep(2)    
-    testBase.enter_username("Pepito Perez")
     time.sleep(2)
-    testBase.enter_email("pepitoperez@pepito.com")
+   
+  def testTarea(self):
+    driver = self.driver
+    driver.get("https://www.online-notepad.net/es/bloc-de-notas-online")
+        
+    testTarea = pagesTarea(driver)
+    testTarea.click_tarea()
     time.sleep(2)
-    testBase.enter_currentAddress("Ciudad Autonoma de Buenos Aires")
-    time.sleep(2)
-    testBase.enter_permanentAddress("Ciudad Autonoma de Buenos Aires, Argentina")
-    time.sleep(2)
-    testBase.enter_submit
-    time.sleep(2)
-
+    testTarea.enter_input("Prueba01")
 
   @classmethod  
   def tearDownClass(cls):
